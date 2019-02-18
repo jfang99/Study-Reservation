@@ -40,6 +40,10 @@
                                     <segue destination="A3o-sj-22C" kind="push" identifier="signIn" id="tsG-Cc-9E2"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="c4a-e1-i8N">
+                                <rect key="frame" x="85" y="141" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -75,8 +79,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fyT-P3-stk">
-                                            <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" highlightedImage="url" id="fyT-P3-stk">
+                                            <rect key="frame" x="20" y="17" width="42" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -95,7 +99,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FwU-o2-HBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="130"/>
+            <point key="canvasLocation" x="988.5" y="129.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQg-xZ-gLO">
@@ -116,6 +120,9 @@
             <point key="canvasLocation" x="73.5" y="129.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="url" width="225" height="225"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Wgs-la-wiC"/>
     </inferredMetricsTieBreakers>

@@ -17,6 +17,7 @@ var seatArray: [Seat] = {
 }()
 
 
+
 class SeatCollectionViewController: UICollectionViewController {
 
     var cameFromSignIn = true
@@ -92,7 +93,7 @@ class SeatCollectionViewController: UICollectionViewController {
         }
         if cameFromSignIn == true && seatArray[index].checkIsOccupied() == true && initialCondition == false
         {// Make alert of signing in successfully
-            let alertController = UIAlertController(title: "Congratulations", message: "Reserved successfully", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Congratulations", message: "Reserved successfully!\nPlease Tap 'Back'", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style:.default , handler: { (_) in print("")
                 // Code to execute when user taps this button
                 
@@ -105,7 +106,7 @@ class SeatCollectionViewController: UICollectionViewController {
     
         if cameFromSignIn == false && seatArray[index].checkIsOccupied() == false && initialCondition == true
         {// Make alert of signing out successfully
-            let alertController = UIAlertController(title: "Congratulations", message: "You are all set!\nPlease Tap Back", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Congratulations", message: "You are all set!\nPlease Tap 'Back'", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style:.default , handler: { (_) in print("")
                 // Code to execute when user taps this button
                 
