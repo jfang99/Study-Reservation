@@ -10,7 +10,7 @@ import UIKit
 
 var seatArray: [Seat] = {
     var arr = [Seat]()
-    for i in 0..<40 {
+    for i in 0..<20 {
         arr.append(Seat())
     }
     return arr
@@ -75,8 +75,13 @@ class SeatCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.row
-        seatArray[index].startReservation(UID: "983787e8ueyu")
-        
+        var initialCondition = seatArray[index].checkIsOccupied()
+        if cameFromSignIn == true {
+            seatArray[index].startReservation(UID: "983787e8ueyu")
+        }
+        else{
+            seatArray[index].signout(UID: "983787e8ueyu")
+        }
         if let cell = collectionView.cellForItem(at: indexPath) as? SeatCollectionViewCell {
             let seat = seatArray[indexPath.row]
             if seat.checkIsOccupied() == true {
@@ -85,21 +90,32 @@ class SeatCollectionViewController: UICollectionViewController {
                 cell.backgroundColor = .green
             }
         }
-        /*
-        if cell.backgroundColor == .red
-        {// Make alert
-        let alertController = UIAlertController(title: "Congratulations", message: "Reserved successfully", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style:.default , handler: { (_) in
-            // Code to execute when user taps this butttttttton
-            present(alertController, animated: true, completion: nil)
-        }))
-        
-        DispatchQueue.main.async {
-            self.present(alertController, animated: true, completion: nil)
-        }
- */
+        if cameFromSignIn == true && seatArray[index].checkIsOccupied() == true && initialCondition == false
+        {// Make alert of signing in successfully
+            let alertController = UIAlertController(title: "Congratulations", message: "Reserved successfully", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style:.default , handler: { (_) in print("")
+                // Code to execute when user taps this button
+                
+            }))
+
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     
+        if cameFromSignIn == false && seatArray[index].checkIsOccupied() == false && initialCondition == true
+        {// Make alert of signing out successfully
+            let alertController = UIAlertController(title: "Congratulations", message: "You are all set!\nPlease Tap Back", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style:.default , handler: { (_) in print("")
+                // Code to execute when user taps this button
+                
+            }))
+            
+            DispatchQueue.main.async {
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+        }
 
     // MARK: UICollectionViewDelegate
 
@@ -133,4 +149,5 @@ class SeatCollectionViewController: UICollectionViewController {
     */
 
     
+}
 }
