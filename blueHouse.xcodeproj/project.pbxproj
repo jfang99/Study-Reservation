@@ -15,6 +15,7 @@
 		B56F2B36221A408800D6C931 /* SeatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56F2B35221A408800D6C931 /* SeatCollectionViewController.swift */; };
 		B56F2B38221A411200D6C931 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56F2B37221A411200D6C931 /* Seat.swift */; };
 		B56F2B3A221A438800D6C931 /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56F2B39221A438800D6C931 /* SeatCollectionViewCell.swift */; };
+		B5A4ADD1221A5882008AD07F /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A4ADD0221A5882008AD07F /* SignOut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B56F2B35221A408800D6C931 /* SeatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewController.swift; sourceTree = "<group>"; };
 		B56F2B37221A411200D6C931 /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 		B56F2B39221A438800D6C931 /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
+		B5A4ADD0221A5882008AD07F /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				B56F2B2A221A195500D6C931 /* Assets.xcassets */,
 				B56F2B2C221A195500D6C931 /* LaunchScreen.storyboard */,
 				B56F2B2F221A195500D6C931 /* Info.plist */,
+				B5A4ADD0221A5882008AD07F /* SignOut.swift */,
 			);
 			path = blueHouse;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				B56F2B3A221A438800D6C931 /* SeatCollectionViewCell.swift in Sources */,
 				B56F2B36221A408800D6C931 /* SeatCollectionViewController.swift in Sources */,
 				B56F2B26221A195300D6C931 /* ViewController.swift in Sources */,
+				B5A4ADD1221A5882008AD07F /* SignOut.swift in Sources */,
 				B56F2B38221A411200D6C931 /* Seat.swift in Sources */,
 				B56F2B24221A195300D6C931 /* AppDelegate.swift in Sources */,
 			);

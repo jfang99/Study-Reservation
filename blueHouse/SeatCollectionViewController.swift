@@ -15,7 +15,7 @@ class SeatCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 0..<20 {
+        for i in 0..<40 {
         seatArray.append(Seat())
         // Do any additional setup after loading the view.
         }
