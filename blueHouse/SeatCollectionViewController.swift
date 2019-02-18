@@ -8,9 +8,9 @@
 
 import UIKit
 
+var seatArray = [Seat?]()
+
 class SeatCollectionViewController: UICollectionViewController {
-    
-    var seatArray = [Seat?]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,12 +79,22 @@ class SeatCollectionViewController: UICollectionViewController {
             } else {
                 cell.backgroundColor = .green
             }
-        
         }
-            
+        /*
+        if cell.backgroundColor == .red
+        {// Make alert
+        let alertController = UIAlertController(title: "Congratulations", message: "Reserved successfully", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style:.default , handler: { (_) in
+            // Code to execute when user taps this butttttttton
+            present(alertController, animated: true, completion: nil)
+        }))
         
-        //}
-    }
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+ */
+        }
+    
 
     // MARK: UICollectionViewDelegate
 
