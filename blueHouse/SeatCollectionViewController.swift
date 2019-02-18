@@ -21,6 +21,10 @@ class SeatCollectionViewController: UICollectionViewController {
         }
     }
 
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -62,6 +66,25 @@ class SeatCollectionViewController: UICollectionViewController {
     
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.row
+        if seatArray[index] != nil {
+            seatArray[index]!.startReservation(UID: "983787e8ueyu")
+        }
+        if let cell = collectionView.cellForItem(at: indexPath) as? SeatCollectionViewCell {
+            let seat = seatArray[indexPath.row]
+            if seat?.checkIsOccupied() == true {
+                cell.backgroundColor = .red
+            } else {
+                cell.backgroundColor = .green
+            }
+        
+        }
+            
+        
+        //}
+    }
 
     // MARK: UICollectionViewDelegate
 
@@ -94,4 +117,5 @@ class SeatCollectionViewController: UICollectionViewController {
     }
     */
 
+    
 }
