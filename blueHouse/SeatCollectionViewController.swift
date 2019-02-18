@@ -8,17 +8,23 @@
 
 import UIKit
 
-var seatArray = [Seat?]()
+var seatArray: [Seat] = {
+    var arr = [Seat]()
+    for i in 0..<40 {
+        arr.append(Seat())
+    }
+    return arr
+}()
+
 
 class SeatCollectionViewController: UICollectionViewController {
 
+    var cameFromSignIn = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 0..<40 {
-        seatArray.append(Seat())
-        // Do any additional setup after loading the view.
-        }
+
     }
 
     
@@ -58,7 +64,7 @@ class SeatCollectionViewController: UICollectionViewController {
         let seat = seatArray[indexPath.row]
         
         // Configure the cell
-        if seat?.checkIsOccupied() == true {
+        if seat.checkIsOccupied() == true {
             cell.backgroundColor = .red
         } else {
             cell.backgroundColor = .green
@@ -69,12 +75,11 @@ class SeatCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.row
-        if seatArray[index] != nil {
-            seatArray[index]!.startReservation(UID: "983787e8ueyu")
-        }
+        seatArray[index].startReservation(UID: "983787e8ueyu")
+        
         if let cell = collectionView.cellForItem(at: indexPath) as? SeatCollectionViewCell {
             let seat = seatArray[indexPath.row]
-            if seat?.checkIsOccupied() == true {
+            if seat.checkIsOccupied() == true {
                 cell.backgroundColor = .red
             } else {
                 cell.backgroundColor = .green

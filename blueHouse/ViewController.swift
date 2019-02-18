@@ -21,7 +21,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SeatCollectionViewController {
+            if segue.identifier == "signIn" {
+                destination.cameFromSignIn = true
+            } else if segue.identifier == "signOut" {
+                destination.cameFromSignIn = false
+            }
+        }
+        
+        super.prepare(for: segue, sender: sender)
+    }
    
 
 

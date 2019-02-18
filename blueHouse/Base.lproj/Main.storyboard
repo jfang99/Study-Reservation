@@ -24,18 +24,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jm1-9Q-Aer">
-                                <rect key="frame" x="174" y="193" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign in"/>
-                                <connections>
-                                    <segue destination="A3o-sj-22C" kind="push" id="VAu-hy-Scu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gBV-2E-Lhu">
                                 <rect key="frame" x="169" y="231" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <segue destination="A3o-sj-22C" kind="push" identifier="signOut" id="Wgs-la-wiC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h3n-qw-yh7">
+                                <rect key="frame" x="174" y="146" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <segue destination="A3o-sj-22C" kind="push" identifier="signIn" id="tsG-Cc-9E2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,7 +95,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FwU-o2-HBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.5" y="129.5"/>
+            <point key="canvasLocation" x="989" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oQg-xZ-gLO">
@@ -113,4 +116,7 @@
             <point key="canvasLocation" x="73.5" y="129.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wgs-la-wiC"/>
+    </inferredMetricsTieBreakers>
 </document>
