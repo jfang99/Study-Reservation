@@ -14,12 +14,11 @@ class SeatCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        seatArray.append(Seat())
-        seatArray.append(Seat())
-        seatArray.append(nil)
+        
+        for i in 0..<20 {
         seatArray.append(Seat())
         // Do any additional setup after loading the view.
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,10 +54,10 @@ class SeatCollectionViewController: UICollectionViewController {
         let seat = seatArray[indexPath.row]
         
         // Configure the cell
-        if seat == nil {
-            cell.backgroundColor = .blue
-        } else {
+        if seat?.checkIsOccupied() == true {
             cell.backgroundColor = .red
+        } else {
+            cell.backgroundColor = .green
         }
     
         return cell
